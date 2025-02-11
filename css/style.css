@@ -1,312 +1,95 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:500");
-
-* {
-  box-sizing: border-box;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #8d6161;
   margin: 0;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
-  scroll-behavior: smooth;
 }
 
-body {
-  background-color: #fff;
+.navbar {
+  background-color: #4f2323;
+  padding: 10px 0;
+  text-align: center;
 }
 
-li,
-a,
-button {
-  font-weight: 500;
-  font-size: 16px;
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.navbar li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.navbar a {
+  color: white;
   text-decoration: none;
-}
-
-/* Header */
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 8%;
-  transition: 1s;
-  z-index: 50;
-  background-color: #fff;
-}
-
-header.sticky {
-  padding: 19px 5%;
-  background-color: #fff;
-  box-shadow: 1px 1px 15px -3px rgba(39, 39, 39, 0.5);
-}
-
-header .logo a {
-  position: relative;
-  font-weight: 700;
-  color: black;
-  font-size: 1em;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  transition: 0.6s;
-}
-
-.nav_links {
-  list-style: none;
-  position: relative;
-  display: flex;
-}
-
-.nav_links li {
-  display: inline-block;
-  padding: 0 20px;
-  position: relative;
-}
-
-.nav_links li a {
-  transform: all 0.3s ease 0s;
-  position: relative;
-  letter-spacing: 1px;
-  transition: 0.1s;
-  text-transform: uppercase;
-  color: black;
-}
-
-.nav_links li a:hover {
-  color: rgb(169, 169, 169);
-}
-
-/* About Section */
-#about {
-  width: 100%;
-  height: 95vh;
-  position: relative;
-}
-
-.about {
-  position: absolute;
-  left: 8%;
-  right: 8%;
-  transform: translate(5%, 43%);
-  margin-bottom: -10rem;
-}
-
-#about h1 {
-  font-size: 40px;
-  color: #1e293b;
-  margin: 0.5rem 0 1rem 0;
-}
-
-
-#about p {
-  font-size: 16px;
-  color: #6b7280;
-  margin-bottom: 1.5rem;
-  line-height: 1.4;
-}
-
-.img_about img {
-  width: 210px;
-  height: auto;
-  position: absolute;
-  left: 80%;
-  top: 27%;
-  transform: translateX(-80%);
-}
-
-.about .about-icons {
-  padding: 12px 0;
-  display: flex;
-  justify-content: start;
-  z-index: 99;
-  position: relative;
-  text-align: start;
-  margin-left: -10px;
-}
-
-.about .about-icons a {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 3px;
-}
-
-.about .about-icons i {
-  font-size: 32px;
-  color: #6b7280;
-  transition: 0.1s;
-}
-
-.about .about-icons i:hover {
-  color: #7e8187;
-  transform: scale(1.1);
-  transition: 0.2s;
-}
-
-/* Contact Section */
-.contact {
-  padding: 2% 10% 0%;
-  background-color: #fff;
-  text-align: center; /* Center align text */
-}
-
-.contact span {
-  color: #950909;
   font-weight: bold;
 }
 
-.contact-title {
-  color: #1e293b;
-  text-align: center;
+.navbar a:hover {
+  text-decoration: underline;
 }
 
-.contact-title h1 {
-  font-size: 40px;
-  margin-top: 3.5rem;
-}
-
-.contact-title p {
-  font-size: 20px;
-}
-
-#contact .row {
-  margin: 30px auto; /* Center align row */
-  padding: 0 10% 5rem;
-  display: flex;
-  justify-content: center; /* Center align content */
-  flex-wrap: wrap; /* Allow wrapping for smaller screens */
-}
-
-#contact .col {
-  padding: 10px;
-  margin: 10px;
-  height: auto; /* Adjust height to auto */
-}
-
-#contact .left {
-  width: 100%; /* Full width for smaller screens */
-  max-width: 400px; /* Max width for larger screens */
-}
-
-#contact .right {
-  width: 100%; /* Full width for smaller screens */
-  max-width: 400px; /* Max width for larger screens */
-  background-color: #ffffff;
-  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.4);
-  border-radius: 20px;
-  padding: 45px;
-  margin-top: 20px; /* Add margin for spacing */
-}
-
-#contact img {
-  width: 100%; /* Full width for smaller screens */
-  max-width: 400px; /* Max width for larger screens */
-  display: block;
-  margin: 10% auto;
-}
-
-input[type="text"],
-[type="email"],
-select,
-textarea {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #828282;
-  border-radius: 5px;
-  box-sizing: border-box;
-  margin: 6px 0 15px 0;
-}
-
-input[type="submit"] {
-  background-color: #950909;
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  text-align: center;
-  transition: 0.1s;
-}
-
-input[type="submit"]:hover {
-  background-color: #950909;
-  transition: 0.2s;
-  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
-}
-
-input[type="submit"]:active {
-  transform: scale(1.1);
-  transition: 0.1s;
-}
-
-.btn-form {
-  text-align: center;
-  margin-top: 2rem;
-}
-
-.contact-box {
-  padding: 2rem;
-  margin: 2rem auto;
+.container {
   max-width: 800px;
-}
-
-/* Footer */
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  text-align: center;
-  margin-top: 5rem;
-}
-
-.social-icons {
-  padding: 12px 0;
-  display: flex;
-  justify-content: center;
-  z-index: 1;
-  position: relative;
+  margin: 0 auto;
+  padding: 20px;
   text-align: center;
 }
 
-.social-icons a {
+.about-me, .skills, .contact {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #333;
+}
+
+h1 {
+  color: #333;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.social-icon {
+  display: inline-block;
+  margin: 10px;
+}
+
+.icon {
   width: 40px;
   height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 3px;
-  background-color: #fff;
-  border-radius: 50%;
 }
 
-.social-icons i {
-  font-size: 30px;
-  color: #950909;
-  transition: 0.1s;
+.social-icon {
+  display: inline-block;
+  margin: 10px;
+  color: #633737;
+  transition: color 0.3s;
 }
 
-.social-icons i:hover {
-  color: #950909;
-}
-
-.social-icons a:hover {
-  background-color: #ffffff;
-  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
-}
-
-.createby p:nth-child(1) {
-  font-size: 15px;
-  color: #1e293b;
-  font-weight: unset;
-}
-
-.createby p:nth-child(2) {
-  font-size: 15px;
-  margin: -5px 0 10px;
-  font-weight: unset;
-  color: #1e293b;
+.social-icon:hover {
+  color: #007bff; 
 }
